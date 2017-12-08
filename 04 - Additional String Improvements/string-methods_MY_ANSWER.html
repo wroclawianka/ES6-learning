@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New String Methods</title>
+</head>
+<body>
+
+<script>
+const course = 'RFB2';
+const flightNumber = '20-AC2018-jz';
+const accountNumber = '825242631RT0001';
+
+const make = 'BMW';
+const model = 'x5';
+const colour = 'Royal Blue';
+
+// .startsWith()
+course.startsWith('RFB2'); //true
+course.startsWith('rfb2'); //false 
+// to have case insensitive results - use regular expresion
+
+flightNumber.startsWith('AC', 3); // starts after 3 characters
+
+// .endsWith()
+flightNumber.endsWith('jz');
+
+// 0001 is RT?
+accountNumber.endsWith('RT', 11); // take only first 11 numbers
+
+// .includes()
+flightNumber.includes('AC'); // true
+
+flightNumber.includes('ac'); // false - the same case sensitivity story
+
+// .repeat()
+
+function leftPad(str, length = 20){
+  return `→ ${' '.repeat(length - str.length)}${str}`;
+}
+
+console.log(leftPad(make));
+console.log(leftPad(model));
+console.log(leftPad(colour));
+
+
+</script>
+
+</body>
+</html>
