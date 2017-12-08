@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring Arrays</title>
+</head>
+<body>
+<script>
+  const details = ['Dorota', 456, 'wroclawianka'];
+  const [surname, id, nickname] = details;
+
+  console.log(surname, id, nickname);
+
+  const data = 'Basketball,Sports,90210,23,wes,bos,cool'; //nothing happens with wes,bos,cool
+  const [itemName, category, sku, inventory] = data.split(','); //splitting
+
+  const team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
+
+  const [captain, assistant, ...players] = team; //rest operator
+
+</script>
+</body>
+</html>
