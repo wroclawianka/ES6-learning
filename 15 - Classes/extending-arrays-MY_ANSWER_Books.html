@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Extending</title>
+</head>
+
+<body>
+  <script>
+    class BooksCollection extends Array {
+      constructor(name, ...items) {
+        super(...items);
+        this.name = name;
+      }
+      add(book) {
+        this.push(book);
+      }
+      topRated(limit = 10) {
+        return this.sort((a, b) => (a.stars > b.stars ? -1 : 1)).slice(0, limit);
+      }
+    }
+
+    const books = new BooksCollection('Dorota\'s favorites books',
+      { name: 'The Little Prince', author: 'Antoine de Saint-Exupéry', stars: 10 },
+      { name: 'The Shadow of the Wind', author: 'Carlos Ruiz Zafón', stars: 9 },
+      { name: 'Merde! Rok w Paryżu', author: 'Stephen Clarke', stars: 7 },
+    );
+
+    books.add({ name: 'Origin', author: 'Dan Brown', tars: 8 });
+  </script>
+</body>
+
+</html>
