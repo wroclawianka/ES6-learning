@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Proxies!</title>
+</head>
+
+<body>
+  <script>
+
+    /* The Proxy object is used to define custom behavior for fundamental operations
+     (e.g. property lookup, assignment, enumeration, function invocation, etc). */
+
+    const person = { name: 'Dorota', age: 100 };
+    const personProxy = new Proxy(person, {
+      get(target, name) {
+        return target[name].toUpperCase();
+      },
+      set(target, name, value){
+          if(typeof value === 'string'){
+            target[name] = value.trim().toUpperCase() + '✂️'; 
+            /*example of use: 
+            personProxy.wes = 'I love wes          '; 
+            result = 'I LOVE WES✂️';*/
+          }
+      }
+
+    })
+  /*Proxy cantain: target and handler, 
+  target - object which the proxy virtualizes, 
+  handler - placeholder object which contains traps (all operation that you want to rewritte)
+  traps - The methods that provide property access.*/
+  </script>
+</body>
+
+</html>
