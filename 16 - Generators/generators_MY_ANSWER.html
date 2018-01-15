@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Generators</title>
+</head>
+
+<body>
+  <script>
+
+    function* listPeople() { //generatior function, remember about '*'
+      yield 'Ania'; //keyword, will return this one item unit the function is called again
+      yield 'Basia';
+      yield 'Monika'; /*this values may be generated like:
+      let i = 0;
+      yield i;
+      i++;
+      yield i;
+      i++;
+      yield i; */
+    }
+
+    const people = listPeople();
+    /* people.next will return us Object {value: "Ania", done: false}, 
+    .next again:  Object {value: "Basia", done: false} and so one. 
+    4th time will give us Object {value: undefined, done: true} */
+
+    const inventors = [
+      { first: 'Albert', last: 'Einstein', year: 1879 },
+      { first: 'Isaac', last: 'Newton', year: 1643 },
+      { first: 'Galileo', last: 'Galilei', year: 1564 },
+      { first: 'Marie', last: 'Curie', year: 1867 },
+      { first: 'Johannes', last: 'Kepler', year: 1571 },
+      { first: 'Nicolaus', last: 'Copernicus', year: 1473 },
+      { first: 'Max', last: 'Planck', year: 1858 },
+    ];
+
+    function* loop(arr) {
+      for (const item of arr) {
+        yield item;
+      }
+    }
+
+    const inventorGen = loop(inventors);
+
+  </script>
+</body>
+
+</html>
