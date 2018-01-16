@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brunch with Sets</title>
+</head>
+<body>
+<script>
+  const brunch = new Set();
+
+  brunch.add('Dorota');
+  brunch.add('Zosia');
+  brunch.add('Patrycja');
+
+  const line = brunch.values(); //SetIterator
+  console.log(line.next().value)
+  console.log(line.next().value)
+
+  brunch.add('Piotrek'); //we still can iterate
+  brunch.add('Tadeusz');
+
+  console.log(line.next().value)
+  console.log(line.next().value)
+  console.log(line.next().value)
+
+</script>
+</body>
+</html>

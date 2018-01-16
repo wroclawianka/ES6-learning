@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sets</title>
+</head>
+
+<body>
+  <script>
+
+    const people = new Set();
+    people.add('Dorota'); //property is unique - you cannot add it two times!
+    people.add('Krzysztof');
+    people.add('Agata');
+
+    people.delete("Dorota");
+
+    /*
+    let it = people.values();
+    > undefined
+    it.next()
+    > {value: "Krzysztof", done: false}
+    it.next()
+    > {value: "Agata", done: false}
+    it.next()
+    > {value: undefined, done: true}
+    */
+
+    const students = new Set(['Dorota', 'Sylwia', 'Basia']);
+
+    const dogs = ['Łatek', 'Burek'];
+    const dogSet = new Set(dogs); //set from Array
+
+  </script>
+</body>
+
+</html>

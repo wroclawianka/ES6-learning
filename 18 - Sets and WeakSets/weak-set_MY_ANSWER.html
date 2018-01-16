@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Brunch with Sets</title>
+</head>
+
+<body>
+  <script>
+  //1 - weak set may only contain objects
+  //2 - do not havre iterator, you cannot for (const i of myWeakSet)...
+  //3 - do not have myWeakSet.cleer(), because automatically clean itself (garbage collector will care it for you)
+  let dog1 = { name: 'Snickers', age: 3 };
+  let dog2 = { name: 'sunny', age: 1 };
+
+  const weakSauce = new WeakSet([dog1, dog2]);
+
+  console.log(weakSauce);
+  dog1 = null;
+  console.log(weakSauce);
+
+  </script>
+</body>
+
+</html>
