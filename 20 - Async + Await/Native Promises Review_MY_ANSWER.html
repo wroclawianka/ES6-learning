@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Native Promises</title>
+</head>
+
+<video controls class="handsome"></video>
+
+<body>
+  <script>
+
+    /*    fetch('https://api.github.com/users/wesbos')
+            //will give you just Promise
+          .then(res => {
+            // will give you Response
+            return res.json();
+          }).then(res => {
+            //json
+            console.log(res);
+          }).catch(err => {
+            console.log(err);
+          });*/
+
+    const video = document.querySelector('.handsome');
+
+    navigator.mediaDevices.getUserMedia({ video: true }).then(mediaStream => {
+      video.srcObject = mediaStream;
+      video.load();
+      video.play();
+    }).catch(err => {
+      console.log(err); //e.g. when you click "block" access to camera -> permission denied
+    })
+
+
+  </script>
+</body>
+
+</html>
