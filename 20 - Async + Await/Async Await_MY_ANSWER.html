@@ -8,6 +8,39 @@
 <body>
   <script>
 
+    function breathe(amount) {
+      return new Promise((resolve, reject) => {
+        if (amount < 500) {
+          reject('That is too small of a value');
+        }
+        setTimeout(() => resolve(`Done for ${amount} ms`), amount);
+      });
+    }
+
+    // await breathe(100); -> Uncaught SyntaxError: await is only valid in async function
+
+    async function go() {
+      try {
+        console.log('start');
+        const res = await breathe(1000);
+        console.log(res);
+        const res1 = await breathe(700);
+        console.log(res1);
+        const res2 = await breathe(500);
+        console.log(res2);
+        const res3 = await breathe(1200);
+        console.log(res3);
+        const res4 = await breathe(350); //err
+        console.log(res4);
+        console.log('finish');
+      }
+      catch (err) {
+        console.error('Errrrrrror!')
+        console.error(err);
+      }
+    }
+
+    go();
   </script>
 </body>
 
