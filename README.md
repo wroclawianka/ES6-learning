@@ -1,7 +1,7 @@
 # ES6-learning
 My repository to learn ECMAScript 6 with Wes Bos - course finished
 
-## Learning merterials:
+## Learning materials:
 - [ECMAScript for Everyone](https://es6.io/), by Wes Bos
 
 
