@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Object .entries() and .values()</title>
+</head>
+
+<body>
+  <script>
+    const inventory = {
+      backpacks: 10,
+      jeans: 23,
+      hoodies: 4,
+      shoes: 11
+    };
+
+    // Make a nav for the inventory
+    const nav = Object.keys(inventory).map(item => `<li>${item}</li>`).join('');
+    console.log(nav);
+
+    // tell us how many values we have
+    const totalInventory = Object.values(inventory).reduce((a, b) => a + b);
+    console.log(totalInventory);
+
+    Object.entries(inventory).forEach(([key, val]) => {
+      console.log(key, val);
+    });
+
+    /* result: 
+        <li>backpacks</li><li>jeans</li><li>hoodies</li><li>shoes</li>
+        48
+        backpacks 10
+        jeans 23
+        hoodies 4
+        shoes 11
+    */
+
+    console.log("for of:");
+
+    //other way to do the same:
+    for(const [key, val] of Object.entries(inventory)) {
+      console.log(key, val);
+      // if(key === 'jeans') break;
+    }
+    //advantage of doing this way, except foreach, map, reduce is taht you can break out of it!
+
+
+  </script>
+</body>
+
+</html>
