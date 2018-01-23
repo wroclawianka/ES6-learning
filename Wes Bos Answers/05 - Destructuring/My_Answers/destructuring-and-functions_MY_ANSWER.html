@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring in Action!</title>
+</head>
+<body>
+<script>
+  function convertCurrency(amount) {
+    const converted = {
+      USD: amount * 0.76,
+      GPB: amount * 0.53,
+      AUD: amount * 1.01,
+      MEX: amount * 13.30
+    };
+    return converted;
+  }
+
+  const { MEX, AUD} = convertCurrency(100);
+  console.log(MEX);
+  console.log(AUD);
+
+  function tipCalc({total, tip = 0.15, tax = 0.13}){
+    return total + (tip * total) + (tax + total);
+  }
+
+  tipCalc({total : 200, tip: 0.20, tax: 0.11});
+  tipCalc({total : 308}); //default values
+  tipCalc({tax: 0.17, total : 50}); //changed order
+
+</script>
+</body>
+</html>

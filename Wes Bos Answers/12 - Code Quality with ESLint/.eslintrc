@@ -1,0 +1,14 @@
+{
+  "env" : {
+    "es6" : true,
+    "browser" : true
+  },
+  // "extends" : "eslint:recommended", // turn eslint on
+  "extends" : "airbnb",
+  "rules" : { //turn off some rules, here: Unexpected console statement  no-console
+    "no-console" : 0 // "off", "warn", "error" or 0, 1, 2
+  }
+}
+
+//eslint bad-code.js
+//eslint bad-code.js --fix

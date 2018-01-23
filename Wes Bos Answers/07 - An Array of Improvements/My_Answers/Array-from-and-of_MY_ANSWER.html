@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Array .from() and .of()</title>
+</head>
+<div class="people">
+  <p>Wes</p>
+  <p>Kait</p>
+  <p>Snickers</p>
+</div>
+
+<body>
+  <script>
+    const people = document.querySelectorAll('.people p');
+    const peopleArray = Array.from(people, person => {
+      return person.textContent;
+    })
+    console.log(peopleArray);
+
+    function sumAll() {
+        return Array.from(arguments).reduce((prev, next) => prev + next, 0);
+    }
+
+    let result = sumAll(4,5,47,12,35,14,56);
+    console.log(result);
+
+    const ages = Array.of(23,53, 55,67, 78);
+    console.log(ages);
+
+  </script>
+</body>
+
+</html>

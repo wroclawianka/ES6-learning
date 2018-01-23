@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iterables & Looping</title>
+</head>
+<body>
+
+<script>
+  const apple = {
+    color: 'Red',
+    size: 'Medium',
+    weight: 50,
+    sugar: 10
+  };
+
+//Object.keys(apple) will return us array of keys
+// for(const prop of Object.keys(apple)){
+//     const value = apple[prop];
+//     console.log(value, prop);
+// }
+
+for(const prop in apple){ // so far better to use for...in for objects
+    const value = apple[prop];
+    console.log(value, prop);
+}
+
+</script>
+</body>
+</html>

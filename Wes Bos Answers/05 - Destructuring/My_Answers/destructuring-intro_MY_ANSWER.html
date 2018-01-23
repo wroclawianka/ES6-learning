@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring</title>
+</head>
+<body>
+<script>
+  const person = {
+    first: 'Dorota',
+    last: 'Zet',
+    country: 'Poland',
+    city: 'Wroclaw',
+  };
+
+  const { first, last, city } = person;
+
+  const wes = {
+    first: 'Dorota',
+    last: 'Zet',
+    links: {
+      social: {
+        github: 'https://github.com/wroclawianka',
+      }
+    }
+  };
+
+  const { github : gh } = wes.links.social; //rename
+
+  const settings = { width: 300, color: 'black' }  // height, fontSize
+  const { width : w = 200, height : h = 200, col = 'orange', fs = 20} = settings;
+  // we have: w = 300, h = 200, col = 'black', fs = 20
+
+</script>
+</body>
+</html>
