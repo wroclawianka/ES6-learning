@@ -6,8 +6,10 @@ My repository to learn ECMAScript 6 with Wes Bos - course finished
 
 
 ## See my Angular & TypeScript projects:
-- [Blog Template](https://github.com/unrealdst/BlogApi/tree/master/Blog2.0/blog2.0) - light and modern blog created with Angular 2 which fetch data by API. 
-- [Heroes](https://github.com/wroclawianka/angular2.0_heroes-tutorial) - Angular tutorial 
+- [Blog Template](https://github.com/unrealdst/BlogApi/tree/master/Blog2.0/blog2.0)
+- [Cookbook](https://github.com/wroclawianka/cookbook)
+- [Angular 5 - The Complete Guide](https://www.udemy.com/the-complete-guide-to-angular-2/)
+- [Heroes](https://github.com/wroclawianka/angular2.0_heroes-tutorial)
 
 
 ## JavaScript:
