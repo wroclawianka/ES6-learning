@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/wroclawianka/ES6-learning/master/ES6.png" height="150px"/>
+</p>
+
 # ES6-learning
 My repository to learn ECMAScript 6 with Wes Bos - course finished
 
